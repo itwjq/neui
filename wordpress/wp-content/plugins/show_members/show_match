@@ -1,0 +1,6 @@
+<?php
+$arg=['num'=>0,'id'=>1,'page_size'=>4];
+ $res=show_class_item($arg);
+ var_dump($res);  
+
+ ?>

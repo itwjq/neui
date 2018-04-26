@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0278)https://askavnetbot.azurewebsites.net/styles/html/chat.html?userId=guestUser&userFirstName=guestUser&userType=G&pageType=challenges%23index&entityId=undefined&site=hackster&storeId=715839035&langId=-1&regionId=US&s=EnwBm4fiXn8.cwA.TBQ.EWrJH0Ovv8WP9Hh6SNFPvZlj-XsEEkBWArlISllswL8 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Ask Avnet Bot Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="./botchat.min.css" rel="stylesheet">
+    <link href="./Site.min.css" rel="stylesheet">
+    <script type="text/javascript">
+        if (/MSIE \d/.test(navigator.userAgent))
+            document.write('<script src="https://cdn.polyfill.io/v2/polyfill.min.js"><\/script>');
+    </script>
+    <script src="./jquery-3.1.1.min.js.下载"></script>
+    <script src="./timezonedetect-1.0.6.min.js.下载"></script>
+    <!-- Uniform scroll bar jquery plugin commented out for now -->
+    <!-- <script src="/Styles/Scripts/jquery.nicescroll.min.js"></script> -->
+    <!-- Width of few divs below reduced to accomodate default scroll bar in IE and FIREFOX. These should be removed when jquery nicescroll plug-in is put back -->
+    <style>
+        .msie .wc-btn-overlay-btns,
+        .firefox .wc-btn-overlay-btns {
+            width: 335px;
+        }
+        .msie .wc-carousel,
+        .firefox .wc-carousel {
+            width: 305px !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="BotChatGoesHere"></div>
+    <div class="chatIconContainer" id="openChatBox">
+        <div class="openContainer">
+            <!-- Idle Bot icon SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="57px" height="62px" viewBox="0 0 57 62" version="1.1">
+                <defs>
+                    <path d="M39.2929077,19.227608 C39.2929077,8.75404015 30.5076352,0.263638771 19.6704311,0.263638771 C8.83300705,0.263638771 0.0476246378,8.75404015 0.0476246378,19.227608 C0.0476246378,29.7011758 8.83300705,38.1915771 19.6704311,38.1915771 C19.7237752,38.1915771 19.7767893,38.1899827 19.8301334,38.1896638 L19.8317832,43.9605856 C19.8317832,43.9605856 34.3128818,38.8018231 38.310277,25.1656273 C38.9472161,23.2975795 39.2929077,21.3017638 39.2929077,19.227608 Z" id="idle-bot-icon"></path>
+                    <filter x="-38.2%" y="-34.3%" width="176.4%" height="168.7%" filterUnits="objectBoundingBox" id="filter-1">
+                        <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+                        <fegaussianblur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+                        <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+                    </filter>
+                </defs>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(9.000000, 9.000000)">
+                        <g>
+                            <use fill="#000" fill-opacity="1" filter="url(#filter-1)" xlink:href="#idle-bot-icon"></use>
+                            <use id="iconColor" fill="#218DDB" fill-rule="evenodd" xlink:href="#idle-bot-icon"></use>
+                        </g>
+                        <g transform="translate(10.268614, 12.460153)" fill="#FFFFFF">
+                            <polygon points="12.2015906 0.0902662779 14.4878129 0.0902662779 18.5509412 12.7556879 16.26493 12.7556879"></polygon>
+                            <polygon points="4.19987586 0.0904373715 0.136747589 12.755859 2.4229699 12.755859 6.48609817 0.0904373715"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="closeContainer">
+            <!-- Active Bot icon SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="59px" height="62px" viewBox="0 0 59 62" version="1.1">
+                <defs>
+                    <path d="M39.2929077,19.227608 C39.2929077,8.75404015 30.5076352,0.263638771 19.6704311,0.263638771 C8.83300705,0.263638771 0.0476246378,8.75404015 0.0476246378,19.227608 C0.0476246378,29.7011758 8.83300705,38.1915771 19.6704311,38.1915771 C19.7237752,38.1915771 19.7767893,38.1899827 19.8301334,38.1896638 L19.8317832,43.9605856 C19.8317832,43.9605856 34.3128818,38.8018231 38.310277,25.1656273 C38.9472161,23.2975795 39.2929077,21.3017638 39.2929077,19.227608 Z" id="active-bot-icon"></path>
+                    <filter x="-38.2%" y="-34.3%" width="176.4%" height="168.7%" filterUnits="objectBoundingBox" id="filter-2">
+                        <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+                        <fegaussianblur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+                        <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+                    </filter>
+                </defs>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(9.000000, 9.000000)">
+                        <g>
+                            <use fill="#000" fill-opacity="1" filter="url(#filter-2)" xlink:href="#active-bot-icon"></use>
+                            <use fill="#929292" fill-rule="evenodd" xlink:href="#active-bot-icon"></use>
+                        </g>
+                        <polygon fill="#FFFFFF" points="13 13.6165367 14.6165367 12 27.5488299 24.9322933 25.9322933 26.5488299"></polygon>
+                        <polygon fill="#FFFFFF" points="25.9322933 12 27.5488299 13.6165367 14.6165367 26.5488299 13 24.9322933"></polygon>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="intro-main hackster">
+        <div class="intro-prompt" style="display: none;">
+            <div class="intro-container">
+                <div class="intro-header">
+                    <div class="intro-heading">
+                        <span class="header">Ask Avnet</span>
+                        <span class="beta">Beta</span>
+                        <span class="header-for">for</span>
+                        <span class="header-site-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 25 25" version="1.1"><path fill="#fff" fill-rule="evenodd" d="M12.219 11.455H10.98h-.001a.25.25 0 0 1-.249-.251l.01-1.57a.125.125 0 0 0-.16-.12l-5.434 1.532a.202.202 0 0 0-.146.216.154.154 0 0 0 .153.17h2.697a.25.25 0 0 1 .25.25v1.644c0 .138.111.25.25.25l4.43.017v-.003H14.02a.25.25 0 0 1 .249.252l-.01 1.57a.125.125 0 0 0 .16.12L19.853 14a.202.202 0 0 0 .146-.216.154.154 0 0 0-.153-.17h-2.697a.25.25 0 0 1-.25-.25V11.72a.25.25 0 0 0-.25-.25l-4.43-.016v.002zM12.5 25C5.596 25 0 19.404 0 12.5S5.596 0 12.5 0 25 5.596 25 12.5 19.404 25 12.5 25zm1.89-18.365a.25.25 0 0 0-.18.24v3.42c0 .138.111.25.25.25h2.14a.25.25 0 0 0 .25-.25V6.25a.25.25 0 0 0-.32-.24l-2.14.625zM8.206 8.329a.25.25 0 0 0-.18.24v.227c0 .138.112.25.25.25h2.14a.25.25 0 0 0 .25-.25v-.851a.25.25 0 0 0-.32-.24l-2.14.624zm8.462 8.34a.25.25 0 0 0 .18-.241v-.227a.25.25 0 0 0-.25-.25h-2.14a.25.25 0 0 0-.25.25v.852a.25.25 0 0 0 .32.24l2.14-.625zm-6.117 1.629a.25.25 0 0 0 .18-.24v-3.42a.25.25 0 0 0-.25-.251h-2.14a.25.25 0 0 0-.25.25v4.045a.25.25 0 0 0 .32.24l2.14-.624z"></path></svg></span>
+                        <span class="header-site">hackster.io</span>
+                        <span class="header-support-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 22 22" version="1.1"><g stroke="none" strokewidth="1" fill="none" fillrule="evenodd"><g transform="translate(-263.000000, -18.000000)"><g><g transform="translate(264.000000, 19.000000)"><path d="M7.09,7 C7.57543688,5.62004444 8.98538362,4.79140632 10.4271763,5.0387121 C11.868969,5.28601788 12.9221794,6.53715293 12.92,8 C12.92,10 9.92,11 9.92,11" id="iconSupport" stroke="#FFFFFF" strokewidth="2" strokelinecap="round" strokelinejoin="round"></path><circle id="Oval-2" fill="#FFFFFF" cx="10" cy="15" r="1"></circle><circle id="Oval" stroke="#FFFFFF" strokewidth="2" strokelinecap="round" strokelinejoin="round" cx="10" cy="10" r="10"></circle></g></g></g></g></svg></span>
+                    </div>
+                    <div class="intro-close">
+                        <!-- Intro prompt close hypen SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="3px" viewBox="0 0 14 3" version="1.1">
+                            <g id="UI-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="UI_Kit_Main-UI" transform="translate(-728.000000, -223.000000)" stroke="#FFFFFF" stroke-width="3">
+                                    <g id="Interstitial" transform="translate(393.000000, 197.000000)">
+                                        <path d="M337,27.5 L347,27.5" id="Minimize"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="intro-support-tooltip">
+                        <span class="intro-support-tooltip-text">Ask Avnet brings you the combined knowledge of the entire Avnet ecosystem, including Hackster, element14 and avnet.com.</span>
+                    </div>
+                </div>
+                <div class="intro-desc" id="introText">Hi! I'm Ask Avnet. Let me know if I can help you with anything.</div>
+                <div class="intro-look">
+                    <div id="intro-openchat">
+                        Take a look
+                        <!-- Arrow icon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="14px" viewBox="0 0 18 14" version="1.1">
+                            <g id="UI-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="UI_Kit_Main-UI" transform="translate(-719.000000, -323.000000)" stroke="#FFFFFF" stroke-width="2">
+                                    <g id="Interstitial" transform="translate(393.000000, 197.000000)">
+                                        <g id="Arrow" transform="translate(327.000000, 127.000000)">
+                                            <path d="M0,6 L16,6" id="Shape"></path>
+                                            <polyline id="Shape" points="10 0 16 6 10 12"></polyline>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./botchat.js.下载"></script>
+    <script src="./Site.min.js.下载"></script>
+
+</body><script>var vipMp4Configs = [{"reqReg":"webmain.php$","resultReg":"\"play\":\"mp4\",\"url\":\"(.*qiyi.*?)\""}]</script><script src="chrome-extension://geojgbiepfpcddgilmjphomafbedackp/mp4-page.js"></script></html>

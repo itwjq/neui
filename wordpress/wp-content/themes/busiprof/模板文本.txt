@@ -1,0 +1,27 @@
+127.0.0.1/wordpress/ 主页
+---127.0.0.1/wordpress/contests 赛程显示页
+---127.0.0.1/wordpress/index-project-more 项目展示页
+-----------------------------------------------------------------------
+主页 front-page.php 
+---header 头 header.php
+
+---body   体 --- index-facebook.php 邮箱部分
+		     --- index-more.php     中间提示条部分
+		     --- index-project.php  特色项目部分（设置显示4个）
+ 					>-- index-project-two.php
+ 					       > -- index-short.php (模板对象)
+---footer 尾 index-footer.php
+
+------------------------------------------------------------------------
+赛程显示页 contests.php 
+---header 头 header.php
+---body   体 index-contests.php
+---footer 尾 index-footer.php
+------------------------------------------------------------------------
+项目展示页 index-project-more.php
+---header 头 header.php
+
+---body   体 --- index-project-more-two.php       更多项目
+		     --- index-project-more-short.php     更多项目单个对象
+---footer 尾 index-footer.php
+------------------------------------------------------------------------
